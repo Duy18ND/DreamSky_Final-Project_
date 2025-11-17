@@ -2,7 +2,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./CSS/footer.css";
 import { X } from 'lucide-react';
-
+import thayGiao from "../../../public/image/thayGiao1-removebg-preview.png"
+import coGiao from "../../../public/image/anhCoGiao.png"
+import meomeo from "../../../public/image/mewmew.gif"
+import timtim  from "../../../public/image/heartAnimation.gif"
+import thuKet  from "../../../public/image/thuKet.webp"
+import nhacThu  from "../../../public/audio/nhacThu.mp3"
 interface FooterProps {
   onVisibleChange?: (visible: boolean) => void;
 }
@@ -138,7 +143,7 @@ useEffect(() => {
             <div className="five"></div>
           </div>
         </div>
-        <audio ref={audioRef} src="public/audio/nhacThu.mp3" preload="auto"></audio>
+        <audio ref={audioRef} src={nhacThu} preload="auto"></audio>
         <div className="shadow"></div>
       </div>
 
@@ -157,24 +162,24 @@ useEffect(() => {
             <div className="wrapperLetter">
               <div className="giftbox">
                 <div>
-                  <img src="public/image/thuKet.webp" alt="" className="anhThu" />
+                  <img src={thuKet} alt="" className="anhThu" />
                 </div>
                 <div className="img">
-                  <img src="public/image/heartAnimation.gif" alt="" />
+                  <img src={timtim} alt="" />
                 </div>
               </div>
               <div className="textLetter">
                 <h2>{titleText}</h2>
                 <p className="contentLetter">{contentText}</p>
                 <div className="heartAnimation">
-                  <img src="public/image/heartAnimation.gif" alt="Heart Animation" />
+                  <img src={timtim} alt="Heart Animation" />
                 </div>
               </div>
               <div className="mewmew1">
-                <img src="public/image/mewmew.gif" alt="Mew mew left" />
+                <img src={meomeo} alt="Mew mew left" />
               </div>
               <div className="mewmew2">
-                <img src="public/image/mewmew.gif" alt="Mew mew right" />
+                <img src={meomeo} alt="Mew mew right" />
               </div>
             </div>
           </div>
@@ -183,11 +188,11 @@ useEffect(() => {
       </div>
 
       <div className={`trai ${showCats ? "trai-show" : "trai-hide"}`}>
-        <img src="public/image/anhCoGiao.png" alt="" />
+        <img src={coGiao} alt="" />
       </div>
 
       <div className={`phai ${showCats ? "phai-show" : "phai-hide"}`}>
-        <img src="public/image/thayGiao1-removebg-preview.png" alt="" />
+        <img src={thayGiao} alt="" />
       </div>
 
     </div>
